@@ -1,16 +1,33 @@
-# reddit_clone
+# Reddit Clone 📱💙
+Responsive Full Stack Reddit Clone - Works on Android, iOS & Web! 
 
-A new Flutter project.
 
-## Getting Started
+## Technologies Used 🔨🛠️
+**Server**: Firebase Auth, Firebase Storage, Firebase Firestore
 
-This project is a starting point for a Flutter application.
+**Client**: Flutter, Riverpod 2.0, Routemaster
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
+- Google/Guest Authentication
+- Create, Join community
+- Community Profile (Avatar, Banner, Members) 
+- Edit Description and Avatar of community
+- Post (link only, photo, text only) 
+- Displaying posts from communities user is part of
+- Upvote, Downvote
+- Comment
+- Award the Post
+- Update Karma
+- Add Moderators
+- Moderator- remove post
+- Delete post
+- User Profile (Avatar, Banner) 
+- Theme Switch
+- Cross Platform
+- Responsive UI
+- Latest posts (instead of home, display this to guest users) 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+````
+## Contribution
+All contributions are welcome. If you are interested in seeing a particular feature implemented in this app, please open a new issue after which you can make a PR!
