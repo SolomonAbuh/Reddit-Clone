@@ -1,3 +1,5 @@
+# 🔨🛠️🔨🛠️🔨🛠️🔨🛠️ UNDER CONSTRUCTION 🔨🛠️🔨🛠️🔨🛠️🔨🛠️ 
+
 # Reddit Clone 📱💙
 Responsive Full Stack Reddit Clone - Works on Android, iOS & Web! 
 
@@ -31,3 +33,5 @@ Responsive Full Stack Reddit Clone - Works on Android, iOS & Web!
 ````
 ## Contribution
 All contributions are welcome. If you are interested in seeing a particular feature implemented in this app, please open a new issue after which you can make a PR!
+
+# 🔨🛠️🔨🛠️🔨🛠️🔨🛠️ UNDER CONSTRUCTION 🔨🛠️🔨🛠️🔨🛠️🔨🛠️ 
