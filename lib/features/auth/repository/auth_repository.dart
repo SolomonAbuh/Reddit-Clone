@@ -21,7 +21,6 @@ final authRepositoryProvider = Provider(
       )),
 );
 
-
 class AuthRepository {
   final FirebaseAuth _firebaseAuth;
   final FirebaseFirestore _firebaseFirestore;
@@ -34,6 +33,8 @@ class AuthRepository {
       : _firebaseAuth = auth,
         _firebaseFirestore = firestore,
         _googleSignIn = googleSignIn;
+
+  Stream<User?> get authStateChange => _firebaseAuth.authStateChanges();
 
   CollectionReference get _users =>
       _firebaseFirestore.collection(FirebaseConstants.userCollection);
@@ -49,7 +50,8 @@ class AuthRepository {
 
       UserCredential userCredential =
           await _firebaseAuth.signInWithCredential(credential);
-      late UserModel userModel;
+
+      UserModel userModel;
 
       if (userCredential.additionalUserInfo!.isNewUser) {
         userModel = UserModel(
@@ -62,7 +64,10 @@ class AuthRepository {
             karma: 0,
             awards: []);
         await _users.doc(userCredential.user!.uid).set(userModel.toMap());
+      } else {
+        userModel = await getUserData(uid: userCredential.user!.uid).first;
       }
+
       return right(userModel);
     } on FirebaseException catch (e) {
       throw e.message!;
@@ -70,4 +75,13 @@ class AuthRepository {
       return left(Failure(message: e.toString()));
     }
   }
+
+  Future signOut() async {
+    await _firebaseAuth.signOut();
+  }
+
+  Stream<UserModel> getUserData({required String uid}) => _users
+      .doc(uid)
+      .snapshots()
+      .map((event) => UserModel.fromMap(event.data() as Map<String, dynamic>));
 }
