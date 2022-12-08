@@ -11,7 +11,7 @@ import 'package:reddit_clone/core/failure.dart';
 import 'package:reddit_clone/core/type_defs.dart';
 
 import '../../../core/providers/firebase_providers.dart';
-import '../models/user_model.dart';
+import '../../../models/user_model.dart';
 
 final authRepositoryProvider = Provider(
   ((ref) => AuthRepository(

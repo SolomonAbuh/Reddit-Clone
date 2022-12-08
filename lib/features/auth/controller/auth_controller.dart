@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:reddit_clone/core/utils.dart';
-import '../models/user_model.dart';
+import '../../../models/user_model.dart';
 import '../repository/auth_repository.dart';
 
 final userProvider = StateProvider<UserModel?>((ref) => null);
@@ -41,7 +41,7 @@ class AuthController extends StateNotifier<bool> {
     final user = await _authRepository.signInWithGoogle();
     state = false;
 
-    user.fold((error) => showSnackBar(context, error.message),
+    user.fold((error) => showSnackBar(context: context, text:  error.message),
         (r) => _ref.watch(userProvider.notifier).update((state) => r));
   }
 

@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:reddit_clone/core/common/error_text.dart';
 import 'package:reddit_clone/core/common/loader.dart';
 import 'package:reddit_clone/features/auth/controller/auth_controller.dart';
-import 'package:reddit_clone/features/auth/models/user_model.dart';
+import 'package:reddit_clone/models/user_model.dart';
 import 'package:reddit_clone/features/auth/screens/login_screen.dart';
 import 'package:reddit_clone/firebase_options.dart';
 import 'package:reddit_clone/router.dart';
